@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/garupanojisan/envoy_benchmark/proto/echo";
+
+package echo;
+
+service EchoServer {
+    rpc Echo(Echo.Request) returns (Echo.Response) {}
+}
+
+message Echo {
+    message Request {
+        string message = 1;
+    }
+    message Response {
+        string message = 1;
+    }
+}
